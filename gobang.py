@@ -163,6 +163,11 @@ def main():
             break
         except ValueError:
             print("请输入有效数字")
+        except EOFError:
+            # 处理非交互环境
+            print("\n使用默认棋盘大小：15")
+            size = 15
+            break
 
     game = Gobang(size)
     game.play()
