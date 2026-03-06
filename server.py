@@ -322,6 +322,9 @@ function lv(){location.reload()}
 function rb(){document.getElementById('ab').textContent=ai?'👥 禁用AI':'🤖 启用AI';document.getElementById('ai').className='ai-badge'+(ai?' on':'')}
 function rm(){const m=document.getElementById('gm');if(d.winner){m.textContent=d.winner==='平局'?'🤝 平局':`🎉 ${d.winner==='X'?'黑棋':'白棋'}(${d.winner})获胜`;m.style.display='block';document.getElementById('rb').style.display='block'}}
 function sm(t,e){const m=document.getElementById('msg');m.textContent=t;m.style.display='block';m.classList.toggle('error',e);setTimeout(()=>{m.style.display='none'},3000)}
+function lg() {
+  document.getElementById('crid').textContent = rid;
+}
 cb();setInterval(()=>{if(rid&&!ai)gs()},2000)
 </script>
 </body>
